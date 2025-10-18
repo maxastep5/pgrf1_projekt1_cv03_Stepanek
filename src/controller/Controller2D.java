@@ -1,13 +1,17 @@
 package controller;
 
 
-import model.Line;
 import model.Point;
 import model.Polygon;
-import rasterize.*;
+import rasterize.LineRasterizer;
+import rasterize.LineRasterizerColorTransition;
+import rasterize.PolygonRasterizer;
 import view.Panel;
 
-import java.awt.event.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +47,7 @@ public class Controller2D {
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                polygon.addPoint(new Point(e.getX(), e.getY()));
+               polygon.addPoint(new Point(e.getX(), e.getY()));
                 drawScene();
 
 
@@ -80,7 +84,7 @@ public class Controller2D {
 
 
         //for (Line line : lines)
-        //  lineRasterizer.rasterize(line);
+          //  lineRasterizer.rasterize(line);
 
         if(polygon.getSize()>=2){
 

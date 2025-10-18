@@ -1,4 +1,5 @@
 package rasterize;
+import raster.RasterBufferedImage;
 
 public class LineRasterizerTrivial extends LineRasterizer{
     public LineRasterizerTrivial(RasterBufferedImage raster) {
