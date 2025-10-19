@@ -14,11 +14,7 @@ public class PolygonMode implements DrawingMode {
     private final Panel panel;
     private final Controller2D controller;
     private final PolygonRasterizer polygonRasterizer;
-
-    // Rasterizers
     private LineRasterizer lineRasterizer;
-
-    // To draw
     private Polygon polygon;
 
     public PolygonMode(Controller2D controller, Panel panel, LineRasterizer lineRasterizer) {
@@ -43,6 +39,11 @@ public class PolygonMode implements DrawingMode {
     }
 
     @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
     public void draw() {
         panel.getRaster().clear();
 
@@ -54,5 +55,10 @@ public class PolygonMode implements DrawingMode {
 
         panel.repaint();
 
+    }
+
+    @Override
+    public void clear() {
+        polygon = new Polygon();
     }
 }

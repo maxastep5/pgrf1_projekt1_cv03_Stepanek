@@ -24,15 +24,14 @@ public class PolygonRasterizer {
                     indexB = 0;
                 }
 
-                // If indexB se rovná polygon.getSize
-                // pokud ano, tak indexB = 0
+
 
                 Point pA = polygon.getPoint(indexA);
                 Point pB = polygon.getPoint(indexB);
 
                 lineRasterizer.rasterize(pA, pB);
 
-                // TODO: dodělat
+
             }
         }
     }

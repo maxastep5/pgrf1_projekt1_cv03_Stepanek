@@ -36,7 +36,6 @@ public class LineRasterizerColorTransition extends LineRasterizer {
                 x2 = temp;
             }
             for (int x = x1; x <= x2; x++) {
-                // t = odečtu minimum, dělím rozsahem
                 float t = (x - x1) / (float) (x2 - x1);
 
                 for (int i = 0; i < 3; i++) {
@@ -70,6 +69,6 @@ public class LineRasterizerColorTransition extends LineRasterizer {
             }
         }
 
-        // TODO: dokončit algoritmus
+
     }
 }

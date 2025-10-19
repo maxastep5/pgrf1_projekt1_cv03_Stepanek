@@ -40,7 +40,17 @@ public class InterpolatedLineMode implements DrawingMode{
     }
 
     @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
     public void draw() {
+
+    }
+
+    @Override
+    public void clear() {
 
     }
 }

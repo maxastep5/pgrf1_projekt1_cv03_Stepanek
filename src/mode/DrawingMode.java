@@ -7,5 +7,7 @@ import java.awt.event.MouseEvent;
 public interface DrawingMode {
     void mousePressed(MouseEvent e);
     void mouseDragged(MouseEvent e);
+    void mouseReleased(MouseEvent e);
     void draw();
+    void clear();
 }
