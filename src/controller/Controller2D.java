@@ -1,6 +1,7 @@
 package controller;
 
 
+import fill.SeedFiller;
 import mode.DrawingMode;
 import mode.InterpolatedLineMode;
 import mode.PolygonMode;
@@ -17,6 +18,8 @@ import java.awt.event.*;
 public class Controller2D {
     private final Panel panel;
     private DrawingMode currentMode;
+
+    private SeedFiller filler;
 
 
     private LineRasterizer lineRasterizer;
@@ -76,6 +79,8 @@ public class Controller2D {
                 currentMode.mouseDragged(e);
             }
         });
+
+
 
 
     }

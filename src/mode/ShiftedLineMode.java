@@ -1,11 +1,9 @@
 package mode;
 
 import controller.Controller2D;
-import model.Line;
+import model.Edge;
 import model.Point;
 import rasterize.LineRasterizer;
-import rasterize.LineRasterizerColorTransition;
-import rasterize.LineRasterizerTrivial;
 import view.Panel;
 
 import java.awt.event.MouseEvent;
@@ -16,7 +14,7 @@ public class ShiftedLineMode implements DrawingMode{
     private final Controller2D controller;
     private final Panel panel;
     private final LineRasterizer lineRasterizer;
-    List<Line> lines = new ArrayList<>();
+    List<Edge> lines = new ArrayList<>();
     Point firstPoint = null;
     Point currentPoint = null;
 
@@ -54,7 +52,7 @@ public class ShiftedLineMode implements DrawingMode{
             endPoint = snapToShift(firstPoint, endPoint);
         }
 
-        lines.add(new Line(firstPoint, endPoint));
+        lines.add(new Edge(firstPoint, endPoint));
         firstPoint = null;
         currentPoint = null;
         draw();
@@ -63,7 +61,7 @@ public class ShiftedLineMode implements DrawingMode{
     @Override
     public void draw() {
         panel.getRaster().clear();
-        for (Line line : lines) {
+        for (Edge line : lines) {
             lineRasterizer.rasterize(
                     line.getX1(), line.getY1(),
                     line.getX2(), line.getY2()

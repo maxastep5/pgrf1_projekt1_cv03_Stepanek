@@ -18,9 +18,9 @@ public class RasterBufferedImage implements Raster {
     }
 
     @Override
-    public int getColor(int x, int y) {
+    public int getPixel(int x, int y) {
         // TODO: až ve 2. úloze
-        return 0;
+        return image.getRGB(x,y);
     }
 
     @Override

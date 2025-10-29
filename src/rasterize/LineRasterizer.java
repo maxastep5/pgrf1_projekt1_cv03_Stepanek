@@ -1,6 +1,6 @@
 package rasterize;
 
-import model.Line;
+import model.Edge;
 import model.Point;
 import raster.RasterBufferedImage;
 
@@ -19,7 +19,7 @@ public abstract class LineRasterizer {
         rasterize(p1.getX(), p1.getY(), p2.getX(), p2.getY());
     }
 
-    public void rasterize(Line line) {
+    public void rasterize(Edge line) {
         rasterize(line.getX1(), line.getY1(), line.getX2(), line.getY2());
     }
 }
